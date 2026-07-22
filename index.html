@@ -4,16 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS311 Web Technologies</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            width:90%;
+            max-width:700px;
+            background:#fff;
+            padding:40px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+            text-align:center;
+        }
+
+        h1{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#555;
+            margin-bottom:30px;
+        }
+
+        .assignment{
+            display:block;
+            text-decoration:none;
+            background:#0d6efd;
+            color:#fff;
+            padding:15px;
+            margin:15px 0;
+            border-radius:8px;
+            transition:.3s;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .assignment:hover{
+            background:#084298;
+        }
+
+        footer{
+            margin-top:30px;
+            color:#777;
+            font-size:14px;
+        }
+
+    </style>
+
 </head>
 <body>
 
-    <h1>CS311 Web Technologies</h1>
+    <div class="container">
 
-    <h2>Assignments</h2>
+        <h1>CS311 Web Technologies</h1>
 
-    <ul>
-        <li><a href="Assignment-01/index.html">Assignment 01 - Event Website</a></li>
-    </ul>
+        <p>
+            A collection of HTML5 & CSS3 assignments for the
+            Web Technologies course.
+        </p>
+
+        <a class="assignment" href="Assignment-01/index.html">
+            Assignment 01 – UET IoT & Robotics Innovation Expo 2026
+        </a>
+
+        <!-- Add more assignments below later -->
+
+        <!--
+        <a class="assignment" href="Assignment-02/index.html">
+            Assignment 02
+        </a>
+        -->
+
+        <footer>
+
+            © 2026 Maqsood Ahmad | CS311 Web Technologies
+
+        </footer>
+
+    </div>
 
 </body>
 </html>
