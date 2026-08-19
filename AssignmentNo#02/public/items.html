@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Items | UET Peshawar Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/uet-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <div class="gov-strip">
+        <div class="container gov-strip-content">
+            <div>Department of Computer Science, UET Peshawar</div>
+            <div>
+                <a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer">
+                    <span class="material-icons" style="font-size: 14px;">public</span>
+                    Official university website
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/uet-logo.png" alt="University of Engineering and Technology Peshawar" class="brand-logo-img">
+                <span class="brand-divider"></span>
+                <div class="brand-title">Lost &amp; Found</div>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Open menu">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><span class="material-icons">home</span> Home</a></li>
+                <li><a href="items.html" class="nav-link active"><span class="material-icons">list</span> Browse Items</a></li>
+                <li><a href="add.html" class="nav-link"><span class="material-icons">add_circle</span> Report Item</a></li>
+                <li><a href="about.html" class="nav-link"><span class="material-icons">info</span> About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 1.75rem; padding-bottom: 3.5rem;">
+
+        <div class="section-head">
+            <div>
+                <h2>All listings</h2>
+                <p>Search by item name or place. Use the filters if you already know the type or category.</p>
+            </div>
+            <a href="add.html" class="btn btn-primary btn-sm">
+                <span class="material-icons">add</span> New report
+            </a>
+        </div>
+
+        <section class="filter-toolbar">
+            <div class="filter-grid">
+                <div class="form-field">
+                    <label class="form-label" for="search-input">Search</label>
+                    <input type="text" id="search-input" class="form-input" placeholder="Name, location, or a short detail...">
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="type-filter">Type</label>
+                    <select id="type-filter" class="form-select">
+                        <option value="All">All</option>
+                        <option value="Lost">Lost</option>
+                        <option value="Found">Found</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="category-filter">Category</label>
+                    <select id="category-filter" class="form-select">
+                        <option value="All">All categories</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="status-filter">Status</label>
+                    <select id="status-filter" class="form-select">
+                        <option value="All">All statuses</option>
+                        <option value="Searching">Searching</option>
+                        <option value="Found">Found</option>
+                        <option value="Claim Pending">Claim Pending</option>
+                        <option value="Reported">Reported</option>
+                        <option value="Returned">Returned</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="sort-filter">Sort</label>
+                    <select id="sort-filter" class="form-select">
+                        <option value="date-desc">Newest first</option>
+                        <option value="date-asc">Oldest first</option>
+                        <option value="name-asc">Name A–Z</option>
+                        <option value="name-desc">Name Z–A</option>
+                        <option value="id-desc">Latest ID</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div class="results-meta-bar">
+            <span id="results-count" style="font-weight: 500;">Loading...</span>
+            <button type="button" id="reset-filters-btn" class="btn btn-secondary btn-sm">
+                <span class="material-icons">refresh</span> Clear filters
+            </button>
+        </div>
+
+        <div class="cards-grid" id="items-grid-container"></div>
+
+    </main>
+
+    <footer class="portal-footer">
+        <div class="container">
+            <div class="footer-cols">
+                <div>
+                    <img src="images/uet-logo.png" alt="UET Peshawar" class="footer-logo-img">
+                    <h4>Lost &amp; Found</h4>
+                    <p style="line-height: 1.6; color: #94a3b8; font-size: 0.85rem;">
+                        A course project for Computer Science at UET Peshawar.
+                    </p>
+                    <div style="margin-top: 0.75rem;">
+                        <a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <span class="material-icons" style="font-size: 14px;">public</span> www.uetpeshawar.edu.pk
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Pages</h5>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="items.html">Browse items</a></li>
+                        <li><a href="add.html">Report an item</a></li>
+                        <li><a href="about.html">About &amp; rules</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Quick links</h5>
+                    <ul class="footer-nav">
+                        <li><a href="items.html?type=Lost">Lost items</a></li>
+                        <li><a href="items.html?type=Found">Found items</a></li>
+                        <li><a href="items.html?status=Searching">Still searching</a></li>
+                        <li><a href="items.html?status=Returned">Already returned</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Campus</h5>
+                    <ul class="footer-nav">
+                        <li><span>Department of Computer Science</span></li>
+                        <li><span>UET Peshawar, Jamrud Road</span></li>
+                        <li><span>Peshawar, Khyber Pakhtunkhwa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <div>&copy; 2026 University of Engineering &amp; Technology, Peshawar</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/items.js"></script>
+</body>
+</html>

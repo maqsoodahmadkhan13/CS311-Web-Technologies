@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Item | UET Peshawar Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/uet-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <div class="gov-strip">
+        <div class="container gov-strip-content">
+            <div>Department of Computer Science, UET Peshawar</div>
+            <div>
+                <a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer">
+                    <span class="material-icons" style="font-size: 14px;">public</span>
+                    Official university website
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/uet-logo.png" alt="University of Engineering and Technology Peshawar" class="brand-logo-img">
+                <span class="brand-divider"></span>
+                <div class="brand-title">Lost &amp; Found</div>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Open menu">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><span class="material-icons">home</span> Home</a></li>
+                <li><a href="items.html" class="nav-link"><span class="material-icons">list</span> Browse Items</a></li>
+                <li><a href="add.html" class="nav-link active"><span class="material-icons">add_circle</span> Report Item</a></li>
+                <li><a href="about.html" class="nav-link"><span class="material-icons">info</span> About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+        <div class="form-panel">
+            <div class="form-panel-header">
+                <h2 id="form-page-title">Report an item</h2>
+                <p id="form-page-subtitle">Fill only what you know. A colour, a brand, or a room number is enough to help someone recognise it.</p>
+            </div>
+
+            <form id="item-form">
+
+                <div class="form-field" style="margin-bottom: 1.25rem;">
+                    <label class="form-label">What kind of report? *</label>
+                    <div class="type-toggle-group">
+                        <label class="type-option">
+                            <input type="radio" id="type-lost" name="type" value="Lost" checked>
+                            <div class="type-box">
+                                <span class="material-icons" style="color: var(--status-lost);">search</span>
+                                Lost
+                            </div>
+                        </label>
+                        <label class="type-option">
+                            <input type="radio" id="type-found" name="type" value="Found">
+                            <div class="type-box">
+                                <span class="material-icons" style="color: var(--status-found);">inventory_2</span>
+                                Found
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row-2" style="margin-bottom: 1rem;">
+                    <div class="form-field">
+                        <label class="form-label" for="item-name">Item name *</label>
+                        <input type="text" id="item-name" class="form-input" placeholder="e.g. Black wallet, Dell laptop" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="item-category">Category *</label>
+                        <select id="item-category" class="form-select" required>
+                            <option value="">Choose one</option>
+                            <option value="Wallet">Wallet</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Bottle">Bottle</option>
+                            <option value="ID Card">ID Card</option>
+                            <option value="Bag">Bag</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Keys">Keys</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Books">Books</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row-2" style="margin-bottom: 1rem;">
+                    <div class="form-field">
+                        <label class="form-label" for="item-location">Where on campus? *</label>
+                        <input type="text" id="item-location" class="form-input" placeholder="e.g. Central Library, CS Dept, cafeteria" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="item-date">Date *</label>
+                        <input type="date" id="item-date" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-field" style="margin-bottom: 1rem;">
+                    <label class="form-label" for="item-status">Status *</label>
+                    <select id="item-status" class="form-select" required>
+                        <option value="Searching">Searching</option>
+                        <option value="Found">Found</option>
+                        <option value="Claim Pending">Claim Pending</option>
+                        <option value="Reported">Reported</option>
+                        <option value="Returned">Returned</option>
+                    </select>
+                </div>
+
+                <div class="form-field" style="margin-bottom: 1rem;">
+                    <label class="form-label" for="item-description">Extra details</label>
+                    <textarea id="item-description" class="form-textarea" placeholder="Colour, stickers, name on the card, which lab, anything that would help..."></textarea>
+                </div>
+
+                <div class="form-row-2" style="margin-bottom: 1rem;">
+                    <div class="form-field">
+                        <label class="form-label" for="item-email">Email (optional)</label>
+                        <input type="email" id="item-email" class="form-input" placeholder="yourname@uetpeshawar.edu.pk">
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="item-phone">Phone (optional)</label>
+                        <input type="tel" id="item-phone" class="form-input" placeholder="03xx xxxxxxx">
+                    </div>
+                </div>
+
+                <div class="form-footer-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" id="submit-btn" class="btn btn-primary">
+                        <span class="material-icons">send</span> Submit
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="portal-footer">
+        <div class="container">
+            <div class="footer-cols">
+                <div>
+                    <img src="images/uet-logo.png" alt="UET Peshawar" class="footer-logo-img">
+                    <h4>Lost &amp; Found</h4>
+                    <p style="line-height: 1.6; color: #94a3b8; font-size: 0.85rem;">
+                        A course project for Computer Science at UET Peshawar.
+                    </p>
+                    <div style="margin-top: 0.75rem;">
+                        <a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <span class="material-icons" style="font-size: 14px;">public</span> www.uetpeshawar.edu.pk
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Pages</h5>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="items.html">Browse items</a></li>
+                        <li><a href="add.html">Report an item</a></li>
+                        <li><a href="about.html">About &amp; rules</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Quick links</h5>
+                    <ul class="footer-nav">
+                        <li><a href="items.html?type=Lost">Lost items</a></li>
+                        <li><a href="items.html?type=Found">Found items</a></li>
+                        <li><a href="items.html?status=Searching">Still searching</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Campus</h5>
+                    <ul class="footer-nav">
+                        <li><span>Department of Computer Science</span></li>
+                        <li><span>UET Peshawar, Jamrud Road</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <div>&copy; 2026 University of Engineering &amp; Technology, Peshawar</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
